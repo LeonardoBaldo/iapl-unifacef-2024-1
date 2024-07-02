@@ -5,6 +5,8 @@ import Cryptr from 'cryptr'
 
 const controller = {}     // Objeto vazio
 
+
+
 controller.create = async function(req, res) {
   try {
 
