@@ -64,10 +64,8 @@ export default async function(req, res, next) {
   // VALIDA A SESSSID
   let sessid
   
-  // Tenta descriptografar a sessid utilziando a chave secreta
   try {
-    const cryptr = new Cryptr(process.env.TOKEN_SECRET)
-    sessid = cryptr.decrypt(cryptoSessid)
+    sessid = cryptoSessid
   }
   catch {
     // Caso ocorra algum erro com a decriptografia da sessid,
